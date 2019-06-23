@@ -1,0 +1,1771 @@
+/* ******************** 
+	********************
+
+County: The Republic of Belarus;
+City: Minsk;
+Author: Eugeni Bykovski;
+Date: 20.10.2018;
+File: CSS;
+
+	********************
+******************** */
+
+/* scrollbar */
+
+::-webkit-scrollbar-button { 
+	background-image: url(''); 
+	background-repeat: no-repeat; 
+	width: 3px; 
+	height: 0px; 
+} 
+
+::-webkit-scrollbar-track { 
+	background-color:  #000; 
+	box-shadow: 0px 0px 3px #000 inset;
+} 
+
+::-webkit-scrollbar-thumb { 
+	-webkit-border-radius: 2px; 
+	border-radius: 2px; 
+	background-color: #fff;
+	background-position: center; 
+	background-repeat: no-repeat;
+} 
+
+::-webkit-resizer{ 
+	background-image: url(''); 
+	background-repeat: no-repeat; 
+	width: 3px; 
+	height: 0; 
+} 
+
+::-webkit-scrollbar{ 
+	width: 2px; 
+}
+
+/* end scrollbar */
+
+
+
+
+
+/* начало основных стилей */
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	text-align: justify;
+	background-color: #fff;
+	color: #0f0b0b;
+	overflow-x:hidden;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+*:focus {
+	outline: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	width: 100%;
+}
+
+/* конец основных стилей */
+
+
+
+
+/* начало навбара */
+
+aside {
+	position: fixed;
+	background-color: #141313;
+	top: 0;
+	left: 0;
+	width: 100px;
+	height: 100%;
+	overflow: none;
+	z-index: 1;
+	text-align: center;
+	padding: 0;
+}
+
+.material-icons.md-36 {
+	font-size: 22px;
+}
+
+aside a {
+	display: block;
+	padding: 15px 0;
+	color: #000;
+	transition: all .35s;
+	text-transform: uppercase;
+	font-size: .8em;
+	letter-spacing: 2px;
+}
+
+aside p {
+	margin: 0;
+	padding: 0;
+}
+
+aside a:hover {
+	background-color: #000;
+	color: #fff;
+}
+
+aside nav a:nth-child(2) {
+	background-color: #000;
+	color: #fff;
+}
+
+aside nav a:nth-child(2):hover {
+	background-color: #000;
+	color: #fff;
+}
+
+/* конец навбар */
+
+
+
+
+
+
+/* начало header */
+
+main {
+	background-image: url(_MG_7476-2-2.jpg);
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	min-height: 640px;
+}
+
+main h1{
+	font-size: 3em;
+	line-height: 1.2;
+	font-weight: 100;
+	color: #fff;
+	font-family: 'Times New Roman', sans-serif;
+}
+
+main .home {
+	text-align: center;
+}
+
+.text {
+	margin-top: 6%;
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	max-width: 900px;
+}
+
+main span {
+	font-size: 1.2em;
+	font-family: 'Times New Roman', sans-serif;
+	font-weight: bold;
+	margin-left: -15px;
+}
+
+main .slash {
+	height: 2px;
+	text-align: center;
+	background-color: #ffffff;
+	width: 20%;
+	margin-left: 38%;
+	margin-top: 3%;
+}
+
+
+
+
+/* секция обо мне */
+
+.one {
+	height: 1px;
+	background-color: #7f0000;
+	width: 350px;
+	margin-left: 40%;
+	margin-top: 4%;
+}
+
+.about {
+	width: 100%;
+}
+
+.about .paper {
+	width: 90%;
+	padding-left: 20%;
+	height: 200px;
+	line-height: 1.8;
+}
+
+.about h2 {
+	width: 100%;
+	padding-left: 20%;
+	color: #7f0000;
+	letter-spacing: 4px;
+	padding-bottom: 2%;
+	padding-top: 3%;
+	text-transform: uppercase;
+	text-decoration: line-through;
+	font-size: 22px;
+	font-weight: 300;
+}
+
+.about .paper p {
+	color: #222;
+	font-size: 15px;
+	letter-spacing: 1px;
+	text-align: center;
+}
+
+/* конец секции обо мне */
+
+
+
+
+
+
+/* секция с карточками (4 штуки) */
+
+.about .container {
+    position: relative;
+    margin: 80px auto 0;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 330px;
+    grid-gap: 5px;
+    padding-left: 8%;
+    padding-right: .5%;
+}
+
+.container .card {
+    position: relative;
+    background: #000;
+    overflow: hidden;
+    border-radius: 12px;
+    transition: .5s;
+    cursor: crosshair;
+}
+
+.container .card .img-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+}
+
+.container .card:hover .img-box {
+    opacity: 0.5s;
+}
+
+.container .card .img-box img {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    object-fit: cover;
+}
+
+.container .card .content {
+    position: absolute;
+    width: 100%;
+    height: 40%;
+    bottom: -100%;
+    padding: 1px;
+    padding-top: 0;
+    box-sizing: border-box;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.container .card:nth-child(1) .content {
+    background-color: linear-gradient(0deg, #3a414c, transparent);
+}
+
+.container .card:nth-child(2) .content {
+    background-color: linear-gradient(0deg, #3a414c, transparent);
+}
+
+.container .card:nth-child(3) .content {
+    background-color: linear-gradient(0deg, #3a414c, transparent);
+}
+
+.container .card:nth-child(4) .content {
+    background-color: linear-gradient(0deg, #3a414c, transparent);
+}
+
+.container .card:hover .content {
+    bottom: 0;
+}
+
+.container .card .content h2 {
+    color: #fff;
+    margin: 0 0 10px;
+    padding: 0;
+    font-size: 16px;
+}
+
+.container .card:hover {
+    transform: translateY(-30px);
+    box-shadow: 0 20px 20px rgb(7, 7, 7);
+}
+
+/* конец секции с карточками (4 штуки) */
+
+
+
+
+
+/* секция с портфолио */
+
+.folio {
+	width: 100%;
+	height: auto;
+	line-height: 1.2em;
+	letter-spacing: 1px;
+	background-color: #070707;
+	margin-top: 5%;
+	padding-bottom: 3%;
+}
+
+.folio h2 {
+	width: 100%;
+	padding-left: 20%;
+	color: #7f0000;
+	letter-spacing: 4px;
+	padding-top: 5%;
+	padding-bottom: 2%;
+	text-transform: uppercase;
+	text-decoration: line-through;
+	font-size: 22px;
+	font-weight: 300;
+}
+
+.folio ul {
+	margin-left: 6%;
+}
+
+.folio li {
+	display: inline-block;
+	padding-right: 30px;
+	padding-top: 10px;
+}
+
+.image {
+ 	overflow:hidden;
+ 	width: 380px;
+ 	height:250px;
+}
+
+ .image img {
+ 	-moz-transition: all 1s ease-out;
+ 	-o-transition: all 1s ease-out;
+ 	-webkit-transition: all 1s ease-out;
+}	
+ 
+.image img:hover{
+ 	-webkit-transform: scale(1.2);
+ 	-moz-transform: scale(1.2);
+ 	-o-transform: scale(1.2);
+ 	cursor: crosshair;
+}
+
+.our-works {
+	margin-top: 5%;
+	margin-bottom: 2%;
+	width: 100%;
+	height: auto;
+	background-color: #0c0c0c;
+	opacity: .9;
+}
+
+.our-works a {
+	padding-left: 42%;
+	color: #fff;
+	font-size: 18px;
+	letter-spacing: 2px;
+	opacity: .9;
+	transition: all .5s;
+}
+
+.our-works a:hover {
+	color: #7f0000;
+	transition: all .5s ease-in-out 0s;
+	text-decoration: line-through;
+}
+
+/* конец секции с портфолио */
+
+
+
+
+
+/* Секция с проводимыми мероприятиями / amenities */
+/* начало модального окна */
+
+/* 1 */
+
+.amenities .modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.9);
+	z-index: 99999;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	display: none;
+	pointer-events: none;
+}
+
+.amenities .modalDialog:target {
+	display: block;
+	pointer-events: auto;
+}
+
+.amenities .modalDialog > div {
+	width: 60%;
+	height: 50%;
+	position: relative;
+	margin: 10% auto;
+	padding: 10px 30px 50px 30px;
+	border-radius: 50px;
+	background-color: #222;
+	color: #fff;
+	font-size: 15px;
+	line-height: 1.8;
+	text-align: center;
+	letter-spacing: 1px;
+}
+
+.amenities .close {
+	background: #606061;
+	color: #fff;
+	line-height: 30px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 30px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+	transition: .6s;
+}
+
+.amenities .close:hover { 
+	background: #222; 
+	transition: all .6s ease-in-out 0s;
+}
+
+/* 2 */
+
+.amenities .modalDialog2 {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.9);
+	z-index: 99999;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	display: none;
+	pointer-events: none;
+}
+
+.amenities .modalDialog2:target {
+	display: block;
+	pointer-events: auto;
+}
+
+.amenities .modalDialog2 > div {
+	width: 60%;
+	height: 50%;
+	position: relative;
+	margin: 10% auto;
+	padding: 10px 30px 50px 30px;
+	border-radius: 50px;
+	background-color: #222;
+	color: #fff;
+	font-size: 15px;
+	line-height: 1.8;
+	text-align: center;
+	letter-spacing: 1px;
+}
+
+.amenities .close {
+	background: #606061;
+	color: #fff;
+	line-height: 30px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 30px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+	transition: .6s;
+}
+
+.amenities .close:hover { 
+	background: #222; 
+	transition: all .6s ease-in-out 0s;
+}
+
+/* 3 */
+
+.amenities .modalDialog3 {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.9);
+	z-index: 99999;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	display: none;
+	pointer-events: none;
+}
+
+.amenities .modalDialog3:target {
+	display: block;
+	pointer-events: auto;
+}
+
+.amenities .modalDialog3 > div {
+	width: 60%;
+	height: 50%;
+	position: relative;
+	margin: 10% auto;
+	padding: 10px 30px 50px 30px;
+	border-radius: 50px;
+	background-color: #222;
+	color: #fff;
+	font-size: 15px;
+	line-height: 1.8;
+	text-align: center;
+	letter-spacing: 1px;
+}
+
+.amenities .close {
+	background: #606061;
+	color: #fff;
+	line-height: 30px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 30px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+	transition: .6s;
+}
+
+.amenities .close:hover { 
+	background: #222; 
+	transition: all .6s ease-in-out 0s;
+}
+
+/* 4 */
+
+.amenities .modalDialog4 {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.9);
+	z-index: 99999;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	display: none;
+	pointer-events: none;
+}
+
+.amenities .modalDialog4:target {
+	display: block;
+	pointer-events: auto;
+}
+
+.amenities .modalDialog4 > div {
+	width: 60%;
+	height: 50%;
+	position: relative;
+	margin: 10% auto;
+	padding: 10px 30px 50px 30px;
+	border-radius: 50px;
+	background-color: #222;
+	color: #fff;
+	font-size: 15px;
+	line-height: 1.8;
+	text-align: center;
+	letter-spacing: 1px;
+}
+
+.amenities .close {
+	background: #606061;
+	color: #fff;
+	line-height: 30px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 30px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+	transition: .6s;
+}
+
+.amenities .close:hover { 
+	background: #222; 
+	transition: all .6s ease-in-out 0s;
+}
+
+/* конец модального окна */
+
+/* начало свойств карточки */
+
+.amenities {
+	width: 100%;
+	height: auto;
+}
+
+
+.amenities ul {
+	width: 90%;
+	height: auto;
+	margin-left: 8.5%;
+}
+
+.amenities li {
+	display: inline-block;
+	width: 22%;
+	height: 350px;
+	margin-left: 20px;
+	margin-bottom: 50px;
+	margin-top: 50px;
+	text-align: center;
+	background: linear-gradient(30deg, #EECFBA, #1c1c1c);
+	padding: 20px;
+	transition: all .5s;
+	border-radius: 5%;
+	box-shadow: 0 20px 20px rgba(7,7,7,.6);
+}
+
+.amenities li:hover {
+	transform: translateY(-30px);
+    box-shadow: 0 20px 20px rgba(7,7,7,.1);
+    transition: all .5s ease-in-out 0s;
+    background: linear-gradient(30deg, #fff, #222);
+}
+
+.amenities .around {
+	padding-top: 10px;
+	height: 310px;
+}
+
+.amenities .around img {
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+}
+
+.amenities .around h3 {
+	color: #fff;
+	font-size: 14px;
+	letter-spacing: 1.5px;
+	line-height: 1.8;
+	padding-top: 7%;
+	padding-bottom: 15%;
+}
+
+.amenities .around a {
+	color: #333;
+	font-size: 14px;
+	letter-spacing: 1.5px;
+	transition: .4s;
+	border-bottom: 1px solid #2c2c2c;
+	padding: 10px;
+}
+
+.amenities .around a:hover {
+	color: #000;
+	transition: all .4s ease-in-out 0s;
+}
+
+/* конец свойств карточки */
+/* Конец секции с проводимыми мероприятиями / amenities */
+
+
+
+
+
+
+/* Раздел с полезной информацией */
+
+.info {
+	background-color: #111;
+	width: 100%;
+	height: auto;
+	background-attachment: fixed;
+}
+
+.info h1 {
+	width: 100%;
+	padding-left: 20%;
+	color: #7f0000;
+	letter-spacing: 4px;
+	padding-top: 5%;
+	padding-bottom: 2%;
+	text-transform: uppercase;
+	text-decoration: line-through;
+	font-size: 22px;
+	font-weight: 300;
+}
+
+.info .info-text {
+	width: 100%;
+	margin-left: 5%;
+	padding-left: 5%;
+	padding-right: 10%;
+	padding-bottom: 3%;
+	text-align: center;
+}
+
+.info .info-text h3 {
+	font-size: 20px;
+	color: #fff;
+	letter-spacing: 1.5px;
+	font-family: 'Times New Roman', sans-serif;
+}
+
+.info .info-text p {
+	padding-left: 7%;
+	font-size: 14px;
+	color: #bab0b0;
+	letter-spacing: 1px;
+	text-align: left;
+}
+
+/* Конец раздела с полезной информацией */
+
+
+
+
+
+
+/* Начало блока отзывов*/
+
+.comments {
+	width: 100%;
+	height: auto;
+}
+
+.column-seven {
+	width: 100%;
+	height: 480px;
+}
+
+.header-column-seven {
+	width: 100%;
+	text-align: center;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+.header-column-seven h1 {
+	font-size: 22px;
+	text-align: left;
+	padding-left: 20%;
+	word-spacing: 3px;
+	letter-spacing: 2px;
+	color: #7f0000;
+	font-weight: 300;
+	text-transform: uppercase;
+	text-decoration: line-through;
+}
+
+.header-column-seven h3 {
+	color: #333335;
+	font-size: 20px;
+	text-align: center;
+	letter-spacing: 1px;
+}
+
+/* Slider */
+
+#slides {
+    position: relative;
+    height: 100%;
+    margin: auto 14%;
+    width: 80%;
+    list-style-type: none;
+}
+
+.slide {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 350px;
+    opacity: 0;
+    z-index: 1;
+}
+
+.showing {
+    opacity: 1;
+    z-index: 2;
+}
+
+.slide {
+    font-size: 16px;
+    padding: 40px;
+    box-sizing: border-box;
+    background: #222;
+    color: #3f3f3f;
+}
+
+.slide:nth-of-type(1) {
+    background-color: #3f3f3f;
+    border-radius: 15px;
+}
+
+.slide:nth-of-type(2) {
+    background-color: #3f3f3f;
+    border-radius: 15px;
+}
+
+.slide:nth-of-type(3) {
+    background-color: #3f3f3f; 
+    border-radius: 15px;
+}
+
+.slide:nth-of-type(4) {
+    background-color: #3f3f3f; 
+    border-radius: 15px;
+}
+
+.slide:nth-of-type(5) {
+    background-color: #3f3f3f;
+    border-radius: 15px;
+}
+
+.slide:nth-of-type(6) {
+    background-color: #3f3f3f;
+    border-radius: 15px;
+}
+
+.slide:nth-of-type(7) {
+    background-color: #3f3f3f;
+    border-radius: 15px;
+}
+
+.slide:nth-of-type(8) {
+    background-color: #3f3f3f;
+    border-radius: 15px;
+}
+
+.slide:nth-of-type(9) {
+    background-color: #3f3f3f;
+    border-radius: 15px;
+}
+
+blockquote {
+	margin: 0;
+	background-color: #3f3f3f; 
+	padding: 20px 20px 20px 80px;
+	position: relative;
+}
+
+blockquote:before {
+	content: "\201C";
+	font-family: serif;
+	position: absolute;
+	left: 20px;
+	top: 20px;
+	color: #fff;
+	background: #FB6652;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	font-size: 50px;
+	line-height: 1.35;
+	text-align: center;
+}
+
+blockquote p {
+	margin: 0 0 16px;
+	font-size: 14px;
+	line-height: 1.4;
+	letter-spacing: 1px;
+	color: #fff;
+	text-align: center;
+}
+
+blockquote cite {
+	font-style: normal;
+	font-size: 18px;
+	letter-spacing: 1px;
+	color: #fff;
+}
+
+/* End Slider */
+
+
+/* конец блока Отзывы */
+
+
+
+
+
+/* начало секции с контактной формой */
+
+.contact {
+	line-height: 1.2em;
+	letter-spacing: 1px;
+	font-weight: 300;
+	padding-left: 20%;
+	padding-right: 12%;
+	width: 100%;
+	max-width: 1800px;
+	float: center;
+	background-color: #0a0a0a;
+	padding-bottom: 6%;
+	margin-top: 100px;
+}
+
+.contact h2 {
+	font-size: 22px;
+	text-align: left;
+	word-spacing: 3px;
+	letter-spacing: 2px;
+	font-weight: 100;
+	color: #7f0000;
+	text-transform: uppercase;
+	text-decoration: line-through;
+}
+
+.box {
+	min-width: 700px;
+	min-height: 380px;
+	border-radius: 22px;
+	position: relative;
+	transition: 1.5s ease-in-out;
+	transform-style: preserve-3d;
+}
+
+.side {
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	padding: 10px 50px;
+	color: #fff;
+	transform-style: preserve-3d;
+	backface-visibility: hidden;
+	border-radius: 20px;
+}
+
+.content {
+	transform: translateZ(75px);
+	scale (.8);
+	line-height: 1.4em;
+}
+
+.content h1 {
+	position: relative;
+	font-size: 16px;
+	font-family: arial;
+	font-weight: 100;
+	letter-spacing: 2px;
+	padding-top: 10px;
+	margin-top: -100px;
+}
+
+.content img {
+	width: 300px;
+	height: 200px;
+}
+
+.content p {
+	padding: 0 40px;
+	color: #fff;
+	letter-spacing: 1px;
+	font-size: 16px;
+}
+
+.content h1:before {
+	content: "";
+	position: absolute;
+	bottom: -7px;
+	height: 1px;
+	background-color: #fff;
+	width: 100px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.front {
+	z-index: 2;
+	background-image: url(Asphalt-Texture.jpg);
+	background-size: cover;
+	background-size: 100vh;
+	color: #fff;
+}
+
+.back {
+	background-color: #333;
+	transform: rotateY(180deg);
+	z-index: 0;
+	padding-top: 0;
+	background-image: url(keramo-rosso-city-dark-30x60_enl.jpg);
+	background-size: cover;
+}
+
+.box:hover {
+	transform: rotateY(180deg);
+}
+
+.back h1 {
+	margin: 0;
+}
+
+form label, form input {
+	display: block;
+}
+
+form input, form textarea {
+	background: transparent;
+	border: 0;
+	border-bottom: 1px solid #fff;
+	padding: 4px;
+	color: #fff;
+	outline: none;
+	width: 500px;
+	height: 26px;
+}
+
+form label {
+	margin: 16px 0;
+	text-align: left;
+	font-size: 12px;
+	font-weight: 100;
+	letter-spacing: 2px;
+}
+
+form input[type="submit"] {
+	display: block;
+	width: 100px;
+	height: 60px;
+	margin-top: -200px;
+	margin-left: 650px;
+	padding: 5px 10px;
+	border: 1px solid #ffffff;
+	border-radius: 6px;
+	color: #fff;
+	cursor: pointer;
+	transition: 1s;
+}
+
+form input[type="submit"]:hover {
+	background-color: #000;
+	transition: all 1s ease;
+	opacity: .6;
+}
+
+.contact .container {
+	margin-top: 20px;
+	margin-bottom: 100px;
+	background-color: transparent;
+	padding: 20px 0;
+}
+	
+/* конец секции с контактной формой */
+
+
+
+
+
+/* начало секции футера */
+
+.footer {
+	width: 100%;	
+	height: auto;
+}
+
+.top-bar {
+	width: 100%;
+	background-image: url(grains.png);
+	text-align: center;
+	z-index: 5;
+	padding-top: 3%;
+	padding-bottom: .1%;
+}
+
+.top-bar .bar-footer {
+	width: 90%;
+	margin-left: 9%;
+}
+
+.top-bar a {
+	margin: 10px;
+	font-size: 1.5em;
+	color: #fff;
+	transition: all .35s;
+	display: inline-block;
+}
+
+.top-bar a:hover {
+	transform: scale(1.1);
+	color: #fff;
+}
+
+.top-bar p {
+	color: #fff;
+}
+
+.bottom-bar {
+	background-color: #0c0c0c;
+	font-size: .65em;
+	text-align: center;
+	width: 100%;
+	opacity: .9;
+}
+
+.bottom-bar a {
+	color: #7f0000;
+	font-size: .9em;
+}
+
+.bottom-bar a:hover {
+	transform: none;
+	color: #fff;
+}
+
+.bottom-bar p {
+	padding-left: 9%;
+	font-size: 1em;
+	color: #7f0000;
+}
+
+/* конец секции футера */
+
+
+
+
+
+
+/* MEDIA ЗАПРОСЫ ДЛЯ ПЛАНШЕТОВ И МОБИЛЬНЫХ УСТРОЙСТВ */
+
+/* *** MEDIA SCREEN *** */
+
+
+/* TABLETS - Для планшетов */
+
+@media screen and (max-width: 1024px) {
+
+body {
+	overflow-x:hidden; 
+}
+
+aside a {
+	font-size: .65em;
+}
+
+main {
+	display: flex;
+	max-width: 1024px;
+	min-height: 600px;
+}
+
+main .home h1{
+	font-size: 2.2em;
+	color: #ffffff;
+	font-weight: bold;
+	margin-left: -10%;
+}
+
+main .home span {
+	font-size: 1.5em;
+}
+
+.text {
+	text-align: center;
+}
+
+.about h2 {
+	font-size: 18px;
+}
+
+.about p {
+	font-size: 9px;
+}
+
+.about .one {
+	display: none;
+}
+
+.about .container {
+	position: relative;
+	display: grid;
+	max-width: 1024px;
+	margin-top: 14%;
+	padding-left: 28%;
+	grid-template-columns: 1fr 1fr;
+    grid-template-rows: 330px;
+}
+
+.container .card {
+	width: 180px;
+	height: 300px;
+}
+
+.container .card .content h2 {
+	font-size: 10px;
+}
+
+.container .card .content {
+	height: 25%;
+}
+
+.container .card .img-box img {
+	height: 200px;
+}
+
+.container .card:hover {
+    transform: translateY(-20px);
+}
+
+.folio {
+	width: 100%;
+	max-width: 1024px;
+}
+
+.folio h2 {
+	font-size: 18px;
+}
+
+.folio ul {
+	margin-left: 9%;
+}
+
+.amenities {
+	width: 100%;
+	max-width: 1024px;
+}
+
+.amenities .around img {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+}
+
+.amenities .around h3 {
+	color: #fff;
+	font-size: 12px;
+	letter-spacing: 1.5px;
+	line-height: 1.8;
+	padding-top: 20%;
+	padding-bottom: 35%;
+}
+
+.amenities .around a {
+	color: #333;
+	font-size: 12px;
+	letter-spacing: 1.5px;
+	transition: .4s;
+	border-bottom: none;
+	padding: 10px;
+}
+
+/* модальноге окно*/
+
+.amenities .modalDialog4 > div {
+	width: 60%;
+	height: 50%;
+	position: relative;
+	margin: 10% auto;
+	padding: 10px 30px 50px 30px;
+	border-radius: 50px;
+	background-color: #222;
+	color: #fff;
+	font-size: 11px;
+	line-height: 1.8;
+	text-align: center;
+	letter-spacing: 1px;
+}
+
+.amenities .modalDialog3 > div {
+	width: 60%;
+	height: 50%;
+	position: relative;
+	margin: 10% auto;
+	padding: 10px 30px 50px 30px;
+	border-radius: 50px;
+	background-color: #222;
+	color: #fff;
+	font-size: 11px;
+	line-height: 1.8;
+	text-align: center;
+	letter-spacing: 1px;
+}
+
+.amenities .modalDialog2 > div {
+	width: 60%;
+	height: 50%;
+	position: relative;
+	margin: 10% auto;
+	padding: 10px 30px 50px 30px;
+	border-radius: 50px;
+	background-color: #222;
+	color: #fff;
+	font-size: 11px;
+	line-height: 1.8;
+	text-align: center;
+	letter-spacing: 1px;
+}
+
+.amenities .modalDialog > div {
+	width: 60%;
+	height: 50%;
+	position: relative;
+	margin: 10% auto;
+	padding: 10px 30px 50px 30px;
+	border-radius: 50px;
+	background-color: #222;
+	color: #fff;
+	font-size: 11px;
+	line-height: 1.8;
+	text-align: center;
+	letter-spacing: 1px;
+}
+
+/* конец модального окна */
+
+.info {
+	width: 100%;
+	max-width: 1024px;
+}
+
+.info h1 {
+	font-size: 18px;
+}
+
+.info .info-text h3 {
+	font-size: 14px;
+}
+
+.info .info-text p {
+	font-size: 12px;
+}
+
+.comments {
+	margin-bottom: -8%;
+}
+
+.header-column-seven h1 {
+	font-size: 18px;
+}
+
+.header-column-seven h3 {
+	font-size: 15px;
+	padding-left: 10%;
+}
+
+.column-seven-slider-comment {
+	padding-left: 3%;
+}
+
+.column-seven-slider-comment .slide p {
+	font-size: 11px;
+	line-height: 1;
+}
+
+.contact h2 {
+	margin-left: -160px;
+	display: none;
+}
+
+.box {
+	margin-left: -157px;
+	display: none;
+}
+
+.front {
+	width: 600px;
+}
+
+.back {
+	width: 600px;
+	margin-left: 100px;
+}
+
+form input[type="submit"] {
+	display: block;
+	width: 100px;
+	height: 40px;
+	margin-top: -340px;
+	margin-left: 380px;
+	padding: 5px 10px;
+	border: 1px solid #ffffff;
+	border-radius: 6px;
+	color: #fff;
+	cursor: pointer;
+	transition: 1s;
+}
+
+.content {
+	transform: translateZ(100px);
+}
+
+.back .content h1 {
+	margin-left: -260px;
+	font-size: 18px;
+}
+
+.back .content form label{
+	margin-left: 150px;
+}
+
+form input, form textarea { 
+	width: 400px;
+	margin-left: 60px;
+}
+
+}
+
+
+
+
+
+
+
+
+
+/* MOBILE PHONE - Для мобильных устройств */
+
+@media (min-width: 480px) {
+	.mobile-nav {
+		display: none;
+	}
+}
+
+@media (max-width: 480px) {
+
+body {
+	overflow-x:hidden; 
+}
+
+.mobile-nav {
+	display: fixed;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	background: rgba(0,0,0,0.8);
+}
+
+.mobile-nav a {
+	width: 100%;
+	color: #b2b2b2;
+	text-transform: uppercase;
+	font-size: .6em;
+	letter-spacing: 2px;
+	text-align: center;
+	padding: 10px 10px;
+	transition:  all .35s;
+}
+
+.mobile-nav a:hover {
+	background-color: #b2b2b2;
+	color: #222;
+}
+
+aside {
+	background: none;
+	display: none;
+	z-index: -1000;
+}
+
+#nav {
+	display: none;
+}
+
+main {
+	display: flex;
+	max-width: 480px;
+}
+
+main .home h1{
+	font-size: .7em;
+	color: #ffffff;
+	font-weight: bold;
+	margin-left: -21%;
+}
+
+main .home span {
+	font-size: 1.2em;
+}
+
+.text {
+	text-align: center;
+}
+
+.about {
+	margin-top: -174%;
+}
+
+.about h2 {
+	font-size: 11px;
+}
+
+.about .paper {
+	margin-bottom: 52%;
+}
+
+.about .paper p {
+	font-size: 8px;
+	text-align: left;
+}
+
+.about .one {
+	display: none;
+}
+
+.about .container {
+	position: relative;
+	display: grid;
+	max-width: 480px;
+	margin-top: 10%;
+	padding-left: 31%;
+	grid-template-columns: 1fr;
+    grid-template-rows: 200px;
+}
+
+.container .card {
+	width: 100px;
+	height: 200px;
+}
+
+.container .card .content h2 {
+	font-size: 6px;
+}
+
+.container .card .content {
+	height: 40%;
+}
+
+.container .card .img-box img {
+	height: 100px;
+}
+
+.container .card:hover {
+    transform: translateY(-10px);
+}
+
+.folio {
+	width: 100%;
+	max-width: 480px;
+}
+
+.folio h2 {
+	font-size: 11px;
+}
+
+.folio ul {
+	margin-left: -13%;
+}
+
+.image {
+ 	overflow:hidden;
+ 	width: 240px;
+ 	height: 250px;
+}
+
+.amenities {
+	width: 100%;
+	max-width: 480px;
+}
+
+.amenities ul {
+	position: relative;
+	display: grid;
+	max-width: 480px;
+	margin-top: 5%;
+	grid-template-columns: 1fr;
+    grid-template-rows: 450px;
+}
+
+.amenities li {
+	width: 100%;
+	margin-left: -15%;
+}
+
+.amenities .around img {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+}
+
+.amenities .around h3 {
+	color: #fff;
+	font-size: 12px;
+	letter-spacing: 1.5px;
+	line-height: 1.8;
+	padding-top: 20%;
+	padding-bottom: 35%;
+}
+
+.amenities .around a {
+	color: #333;
+	font-size: 12px;
+	letter-spacing: 1.5px;
+	transition: .4s;
+	border-bottom: none;
+	padding: 10px;
+}
+
+/* модальноге окно*/
+
+.amenities .modalDialog4 > div {
+	width: 90%;
+	height: 70%;
+	position: relative;
+	margin: 10% auto;
+	padding: 10px 30px 50px 30px;
+	border-radius: 50px;
+	background-color: #222;
+	color: #fff;
+	font-size: 8px;
+	line-height: 1.8;
+	text-align: center;
+	letter-spacing: 1px;
+}
+
+.amenities .modalDialog3 > div {
+	width: 90%;
+	height: 70%;
+	position: relative;
+	margin: 10% auto;
+	padding: 10px 30px 50px 30px;
+	border-radius: 50px;
+	background-color: #222;
+	color: #fff;
+	font-size: 8px;
+	line-height: 1.8;
+	text-align: center;
+	letter-spacing: 1px;
+}
+
+.amenities .modalDialog2 > div {
+	width: 90%;
+	height: 70%;
+	position: relative;
+	margin: 10% auto;
+	padding: 10px 30px 50px 30px;
+	border-radius: 50px;
+	background-color: #222;
+	color: #fff;
+	font-size: 8px;
+	line-height: 1.8;
+	text-align: center;
+	letter-spacing: 1px;
+}
+
+.amenities .modalDialog > div {
+	width: 90%;
+	height: 70%;
+	position: relative;
+	margin: 10% auto;
+	padding: 10px 30px 50px 30px;
+	border-radius: 50px;
+	background-color: #222;
+	color: #fff;
+	font-size: 8px;
+	line-height: 1.8;
+	text-align: center;
+	letter-spacing: 1px;
+}
+
+/* конец модального окна */
+
+.info {
+	width: 100%;
+	max-width: 480px;
+}
+
+.info h1 {
+	font-size: 11px;
+	padding-left: 28%;
+}
+
+.info .info-text h3 {
+	font-size: 11px;
+}
+
+.info .info-text p {
+	font-size: 10px;
+}
+
+.comments {
+	display: none;
+}
+
+.contact {
+	display: none;
+}
+
+}

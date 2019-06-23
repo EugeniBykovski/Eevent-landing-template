@@ -1,0 +1,184 @@
+<!-- ******************** 
+	********************
+
+County: The Republic of Belarus;
+City: Minsk;
+Author: Eugeni Bykovski;
+Date: 20.10.2018;
+File: HTML, JavaScript;
+
+	********************
+******************** -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<title>Artem Shvets | Gallery</title>
+
+<meta name="theme-color" content="#3399CC">
+<meta name="apple-mobile-web-app-status-bar-style" content="#3399CC">
+<meta charset="UTF-8">
+<meta name="author" content="EugeniBykovski">
+<meta name="robots" content="index, follow">
+<meta http-equiv="pragma" content="no-cache">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="showmen, Belarus, Minsk, Grodno, Gomel, Brest, Mogilev, Vitebsk, ведущий, шоумен, Минск, Брест, Гродно, Гомель, Могилев, Витебск, Беларусь, сайт, галерея, портфолио, Artem Shvets, Артем Швец, Швец">
+<meta name="description" content="Артем Швец - ведущий шоумен в Минске и по всей Беларуси"> 
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+
+<link rel="stylesheet" href="galery.css" type="text/css">
+<link rel="shortcut icon" href="#" type="image/x-icon">
+
+
+<!-- Icons -->
+
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+
+</head>
+<body>
+	
+
+<section class="portfolio">
+	<div class="back">
+		<a href="artem.html"><i class="fa fa-chevron-left" aria-hidden="true"></i> back to main</a>
+	</div>
+
+	<h4>OUR WORKS</h4>
+		<p>Здесь вы можете ознакомиться со всеми моими работами</p>
+
+	<div class="toggles">
+		<button id="photos">Photos</button>
+	</div>
+
+	<div class="posts">
+		<div class="post photos">
+			<img src="ФОТО САЙТ/4.jpg" alt="" width="360" height="250" class="minimized">
+		</div>
+
+		<div class="post photos">
+			<img src="ФОТО САЙТ/pVNTUAkGGDc.jpg" alt="" width="360" height="250" class="minimized">
+		</div>
+
+		<div class="post photos">
+			<img src="ФОТО САЙТ/0637-2.jpg" alt="" width="360" height="250" class="minimized">
+		</div>
+
+		<div class="post photos">
+			<img src="ФОТО САЙТ/_MG_9634-2.jpg" alt="" width="360" height="250" class="minimized">
+		</div>
+
+		<div class="post photos">
+			<img src="Галерея/002.jpg" alt="" width="360" height="250" class="minimized">
+		</div>
+
+		<div class="post photos">
+			<img src="Галерея/eglUcgoitMc.jpg" alt="" width="360" height="250" class="minimized">
+		</div>
+
+		<div class="post photos">
+			<img src="Галерея/_MG_7571-2-2.jpg" alt="" width="360" height="250" class="minimized">
+		</div>
+
+		<div class="post photos">
+			<img src="Галерея/7NiOk9QeIh0.jpg" alt="" width="360" height="250" class="minimized">
+		</div>
+
+		<div class="post photos">
+			<img src="Галерея/GXrdD836te8.jpg" alt="" width="360" height="250" class="minimized">
+		</div>
+
+		<div class="post photos">
+			<img src="Галерея/TUbWa6omjro.jpg" alt="" width="360" height="250" class="minimized">
+		</div>
+
+		<div class="post photos">
+			<img src="Галерея/_MG_9652-2.jpg" alt="" width="360" height="250" class="minimized">
+		</div>
+
+		<div class="post photos">
+			<img src="Галерея/siTouE5V-bU.jpg" alt="" width="360" height="250" class="minimized">
+		</div>
+
+		<div class="post photos">
+			<img src="Галерея/_MG_7418-2.jpg" alt="" width="360" height="250" class="minimized">
+		</div>
+
+		<div class="post photos">
+			<img src="Галерея/O_wi87sGdxs.jpg" alt="" width="360" height="250" class="minimized">
+		</div>
+
+		<div class="post photos">
+			<img src="Галерея/_MG_7566-2-2.jpg" alt="" width="360" height="250" class="minimized">
+		</div>
+
+		<div class="post photos">
+			<img src="Галерея/aj_7_D1akMs.jpg" alt="" width="360" height="500" class="minimized">
+		</div>
+
+		<div class="post photos">
+			<img src="Галерея/_MG_7409-2-2.jpg" alt="" width="360" height="500" class="minimized">
+		</div>
+
+		<div class="post photos">
+			<img src="Галерея/MSNQ6hUjo-k.jpg" alt="" width="360" height="500" class="minimized">
+		</div>
+	</div>
+</section>
+
+<script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous">
+</script>
+
+<script type="text/javascript">
+	$(function () {
+	$('.toggles button').click(function() {
+		var get_id = this.id;
+		var get_current = $('.posts .' + get_id);
+
+		$('.post').not(get_current).hide(400);
+		get_current.show(700);
+	});
+
+	$('#showall').click(function() {
+		$('.post').show(700);
+	});
+})
+
+
+$(document).ready(function(){
+  $(".owl-carousel").owlCarousel();
+  items:8
+});
+
+
+
+
+$(function(){
+  $('.minimized').click(function(event) {
+    var i_path = $(this).attr('src');
+    $('body').append('<div id="overlay"></div><div id="magnify"><img src="'+i_path+'"><div id="close-popup"><i></i></div></div>');
+    $('#magnify').css({
+	    left: ($(document).width() - $('#magnify').outerWidth())/2,
+	    // top: ($(document).height() - $('#magnify').outerHeight())/2 upd: 24.10.2016
+            top: ($(window).height() - $('#magnify').outerHeight())/2
+	  });
+    $('#overlay, #magnify').fadeIn('fast');
+  });
+  
+  $('body').on('click', '#close-popup, #overlay', function(event) {
+    event.preventDefault();
+ 
+    $('#overlay, #magnify').fadeOut('fast', function() {
+      $('#close-popup, #magnify, #overlay').remove();
+    });
+  });
+});
+</script>
+
+</body>
+</html>
